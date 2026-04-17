@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c \"import ast, sys; [ast.parse\\(open\\(f\\).read\\(\\), filename=f\\) for f in ['backend/pipeline.py','backend/config.py','backend/database.py','backend/question_gen.py','backend/schemas.py','backend/main.py','run.py']]; print\\('syntax OK'\\)\")",
+      "Bash(python3 -c \"import ast; [ast.parse\\(open\\(f\\).read\\(\\), filename=f\\) for f in ['backend/pipeline.py','backend/database.py','backend/question_gen.py','backend/schemas.py','backend/main.py','run.py']]; print\\('syntax OK'\\)\")",
+      "Bash(python3 -c \"import ast; [ast.parse\\(open\\(f\\).read\\(\\), filename=f\\) for f in ['backend/question_gen.py','backend/main.py','backend/pipeline.py']]; print\\('syntax OK'\\)\")",
+      "Bash(python3 -c \"import ast; ast.parse\\(open\\('backend/question_gen.py'\\).read\\(\\)\\); print\\('syntax OK'\\)\")",
+      "Bash(python -m backend.tests.test_parsers)",
+      "Bash(./venv/bin/python -m backend.tests.test_parsers)",
+      "Bash(./venv/bin/python -c \"from backend import parsers, pipeline, main; from run import _get_or_create_domain; print\\('ok'\\)\")",
+      "Bash(./venv/bin/python -c \"from backend.pipeline import run_scan, _row_from; print\\('pipeline ok'\\)\")",
+      "Bash(./venv/bin/python -c \"from backend.resolver import resolve_redirects, extract_domain_from_url, clear_cache; print\\('resolver imports ok'\\)\")",
+      "Bash(./venv/bin/pip install *)",
+      "Bash(./venv/bin/python -m pytest backend/tests/test_resolver.py -v)",
+      "Bash(./venv/bin/python -c \"from backend.parsers import parse_gemini_response; import inspect; print\\('async:', inspect.iscoroutinefunction\\(parse_gemini_response\\)\\)\")",
+      "Bash(npx vite *)"
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+  background: #0a0d0e;
+  color: #c6d4d9;
+  font-family: 'JetBrains Mono', Menlo, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e2a31;
+}
+::-webkit-scrollbar-track {
+  background: #0a0d0e;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+}
